@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('imagenes/b1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+        }
+
+        .overlay {
+            background-image: linear-gradient(to bottom, rgba(0, 191, 255, 0.7), rgba(0, 255, 127, 0.7));
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: slideUp 1s ease;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            animation: slideUp 1s ease;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .button {
+            background-color: #FFFFFF;
+            color: #00BFFF;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #00BFFF;
+            color: #FFFFFF;
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1 class="title">Bienvenido a esta página, elige cualquiera de las dos opciones para avanzar</h1>
+            <div class="buttons">
+                <!-- Enlace para el botón "Usuario" -->
+                <!-- Enlace para el botón "Usuario" -->
+                <button class="button" onclick="redirectToIndex('user')">Usuario</button>
+
+
+                <!-- Enlace para el botón "Adminisstrador" -->
+                <button class="button" onclick="redirectToLogin()">Administrador</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function redirectToIndex(userType) {
+        // Redirige a index.php con el parámetro "userType" que indica el tipo de usuario
+        window.location.href = 'index.php?userType=' + userType;
+    }
+
+    function redirectToLogin() {
+        window.location.href = 'login.php';
+    }
+</script>
+
+
+</html>

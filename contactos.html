@@ -1,0 +1,132 @@
+<style>
+    #contactos {
+        display: flex;
+        flex-wrap: wrap;
+        /* Permite que los elementos se envuelvan cuando no quepan en una sola fila */
+        justify-content: space-around;
+        /* Espacio uniforme entre los elementos */
+    }
+
+    .redes {
+        min-height: 10vh;
+        background-image: url('imagenes/fondo.png');
+        background-size: cover;
+    }
+
+
+    .cyberb,
+    .servi,
+    .veamos {
+        flex: 1;
+        /* Cada elemento ocupa una fracción igual del espacio disponible */
+        margin: 10px;
+        /* Márgenes entre los elementos */
+        text-align: center;
+        /* Centra el contenido de los elementos */
+    }
+
+    .social-media1 ul {
+        margin-top: 50px;
+        display: flex;
+        margin-left: 60px;
+    }
+
+    .social-media1 ul a {
+        font-size: 35px;
+        /* Tamaño de fuente de los íconos de redes sociales */
+    }
+
+    .separator3 {
+        border-top: 2px solid #00d4ff;
+        width: 100%;
+        /* Color y grosor del separador */
+
+        /* Margen superior e inferior del separador */
+    }
+
+/* Estilos para pantallas pequeñas (celulares) */
+@media screen and (max-width: 768px) {
+    .cyberb,
+    .servi,
+    .veamos,
+    .social-media1 {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+    
+
+    .cyberb .social-media1 ul{
+        margin-top: 110px;
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Centra los elementos de la lista dentro de .social-media1 */
+        margin: 0; /* Elimina cualquier margen para centrar horizontalmente */
+    }
+
+
+    .social-media1 ul li {
+        display: inline; /* Muestra los elementos de la lista en línea para que estén uno al lado del otro */
+    }
+
+    .social-media1 ul a {
+        font-size: 35px;
+    }
+}
+
+
+</style>
+
+<div id="contactos" class="redes" style="width: 100%;">
+    <div class="separator3">
+        <!-- Separador -->
+    </div>
+
+    <div class="cyberb">
+        <h3 style="color: white;">CyberBullyDefender</h3>
+        <br>
+        <p>Pagina centralizada en la seguridad</p>
+        <p>informatica, cyberacoso y bullying</p>
+
+        <div class="social-media1">
+            <ul>
+                <a href="https://www.facebook.com/" target="_blank" id="face"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.tiktok.com/" target="_blank" id="tw"><i class="bx bxl-tiktok"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" id="ig"><i class="bx bxl-instagram"></i></a>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="servi">
+        <h3>Servicios</h3>
+        <br>
+        <ul>
+            <p>Informacion cibernetica y acoso</p>
+            <br>
+            <p>Capacitaciones</p>
+            <br>
+            <p>Eventos</p>
+
+        </ul>
+    </div>
+
+    <div class="veamos">
+        <div class="politicas_terminos">
+            <a href="politicas_terminos.php">
+            <h3>Política de Privacidad</h3>
+            <h3>Términos y Condiciones</h3></a>
+        </div>
+        <br>
+        <div class="datos">
+            <p>Número de teléfono: 0980006242</p>
+            <p>Dirección: José Palomino y Dolores Sucre, Quito.
+            </p>
+        </div>
+        <div class="copyright">
+            <p>© 2023</p>
+
+        </div>
+    </div>
+    <div>
+    </div>
+</div>
